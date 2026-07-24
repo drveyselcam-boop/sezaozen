@@ -1,34 +1,18 @@
 # Prof. Dr. Seza Özen web sitesi
 
-## GitHub'a yükleme
+Bu paket GitHub Pages için hazırlanmıştır.
 
-1. Repository ana sayfasında **Add file → Upload files** seçin.
-2. Bu klasördeki `index.html`, `style.css` ve `script.js` dosyalarını yükleyin.
-3. Mevcut `index.html` dosyasının üzerine yazılmasına izin verin.
-4. Sayfanın altındaki **Commit changes** düğmesine basın.
-5. GitHub Pages birkaç dakika içinde siteyi güncelleyecektir.
+## Yükleme
 
-## Düzenlenecek alanlar
+1. GitHub repository içinde **Add file → Upload files** seçin.
+2. Bu paketteki bütün dosya ve klasörleri yükleyin.
+3. Mevcut dosyaların üzerine yazılmasına izin verin.
+4. **Commit changes** düğmesine basın.
+5. GitHub Pages birkaç dakika içinde güncellenecektir.
 
-- `index.html` içindeki biyografi metni
-- Çalışma alanları
-- Seçilmiş yayınlar
-- E-posta, adres ve harita bağlantısı
-- Profesyonel fotoğraf
+## İçerik notları
 
-Fotoğraf eklemek için resmi `assets/seza-ozen.jpg` adıyla bu klasöre koyun ve
-`index.html` içindeki `portrait-placeholder` bölümünü şu satırla değiştirin:
-
-```html
-<img class="portrait-image" src="assets/seza-ozen.jpg" alt="Prof. Dr. Seza Özen">
-```
-
-Ardından `style.css` dosyasının sonuna şunu ekleyin:
-
-```css
-.portrait-image {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-```
+- Ana sayfadaki fotoğraf: `assets/seza-ozen-portrait.jpg`
+- Hakkında bölümündeki fotoğraf: `assets/seza-ozen-about.jpg`
+- Yayınlar, gönderilen yayın listesinden hazırlanmıştır.
+- İletişim ve ayrıntılı özgeçmiş bölümü daha sonra gerçek bilgilerle güncellenmelidir.
