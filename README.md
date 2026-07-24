@@ -1,14 +1,19 @@
-# Prof. Dr. Seza Özen web sitesi
+# Prof. Dr. Seza Özen web sitesi — SEO hazırlıklı sürüm
 
-Bu sürümde gönderilen tam yayın listesindeki **612 yayın** `publications.html`
-sayfasına eklenmiştir.
+Eklenenler:
+- Geliştirilmiş sayfa başlıkları ve meta açıklamaları
+- Open Graph ve Twitter paylaşım metinleri
+- Schema.org Person yapılandırılmış verisi
+- Favicon
+- Footer: “Prof. Dr. Seza Özen’in resmi akademik web sitesi”
+- Fotoğraflara hafif optimizasyon (yüksek kalite korunmuştur)
 
-Özellikler:
-- Başlık, yazar, dergi ve anahtar kelime araması
-- Yıla göre filtreleme
-- DOI ve PubMed bağlantıları
-- Mobil uyumlu görünüm
-- Animasyon yok
+Final alan adı belli olmadığı için şunlar şimdilik EKLENMEDİ:
+- canonical URL
+- sitemap.xml
+- robots.txt içindeki sitemap adresi
+- og:url
+- mutlak og:image adresi
+- Google Search Console doğrulaması
 
-GitHub'da bütün dosyaları ve `assets` klasörünü mevcut dosyaların üzerine yükleyip
-**Commit changes** düğmesine basın.
+Domain alındığında bunlar tek seferde güncellenecektir.
