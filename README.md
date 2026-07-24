@@ -1,18 +1,16 @@
 # Prof. Dr. Seza Özen web sitesi
 
-Bu paket GitHub Pages için hazırlanmıştır.
+Bu sürümde:
 
-## Yükleme
+- Mobil menü
+- Telefon ve tablet uyumu
+- Ayrı `publications.html` sayfası
+- DOI ve PubMed bağlantıları
+- Ana sayfada “Tüm yayınlar” bağlantısı
+- Ana sayfada seçilmiş yayınlar bölümü
 
-1. GitHub repository içinde **Add file → Upload files** seçin.
-2. Bu paketteki bütün dosya ve klasörleri yükleyin.
-3. Mevcut dosyaların üzerine yazılmasına izin verin.
-4. **Commit changes** düğmesine basın.
-5. GitHub Pages birkaç dakika içinde güncellenecektir.
+## GitHub'a yükleme
 
-## İçerik notları
-
-- Ana sayfadaki fotoğraf: `assets/seza-ozen-portrait.jpg`
-- Hakkında bölümündeki fotoğraf: `assets/seza-ozen-about.jpg`
-- Yayınlar, gönderilen yayın listesinden hazırlanmıştır.
-- İletişim ve ayrıntılı özgeçmiş bölümü daha sonra gerçek bilgilerle güncellenmelidir.
+Repository içinde **Add file → Upload files** seçin ve paketteki tüm dosyalarla
+`assets` klasörünü yükleyin. Mevcut dosyaların üzerine yazılmasına izin verip
+**Commit changes** düğmesine basın.
