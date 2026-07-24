@@ -17,3 +17,6 @@ Final alan adı belli olmadığı için şunlar şimdilik EKLENMEDİ:
 - Google Search Console doğrulaması
 
 Domain alındığında bunlar tek seferde güncellenecektir.
+
+
+Domain-specific SEO completed for sezaozen.com
