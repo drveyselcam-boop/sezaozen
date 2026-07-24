@@ -52,6 +52,7 @@
               <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>
             </select>
           </label>
+          <button id="publication-reset" class="filter-reset" type="button">Filtreleri temizle</button>
         </div>
 
         <p id="publication-count" class="publication-count">612 yayın gösteriliyor.</p>
@@ -6804,6 +6805,74 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    (function () {
+      const menuButton = document.querySelector(".menu-button");
+      const nav = document.querySelector(".nav");
+
+      if (menuButton && nav) {
+        menuButton.addEventListener("click", function () {
+          const isOpen = nav.classList.toggle("is-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.textContent = isOpen ? "Kapat" : "Menü";
+        });
+      }
+
+      const searchInput = document.getElementById("publication-search");
+      const yearSelect = document.getElementById("publication-year");
+      const items = Array.from(document.querySelectorAll(".searchable-publication"));
+      const count = document.getElementById("publication-count");
+      const empty = document.getElementById("no-publications");
+
+      function normalize(value) {
+        return String(value || "")
+          .toLocaleLowerCase("tr-TR")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+      }
+
+      function applyFilters() {
+        const query = normalize(searchInput ? searchInput.value.trim() : "");
+        const selectedYear = yearSelect ? yearSelect.value : "";
+        let visible = 0;
+
+        items.forEach(function (item) {
+          const searchableText = normalize(
+            item.getAttribute("data-search") || item.textContent
+          );
+          const itemYear = item.getAttribute("data-year") || "";
+          const matchesQuery = query === "" || searchableText.indexOf(query) !== -1;
+          const matchesYear = selectedYear === "" || itemYear === selectedYear;
+          const shouldShow = matchesQuery && matchesYear;
+
+          item.style.display = shouldShow ? "" : "none";
+          if (shouldShow) visible += 1;
+        });
+
+        if (count) count.textContent = visible + " yayın gösteriliyor.";
+        if (empty) empty.style.display = visible === 0 ? "block" : "none";
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener("input", applyFilters);
+        searchInput.addEventListener("keyup", applyFilters);
+      }
+      if (yearSelect) {
+        yearSelect.addEventListener("change", applyFilters);
+        yearSelect.addEventListener("input", applyFilters);
+      }
+
+      const resetButton = document.getElementById("publication-reset");
+      if (resetButton) {
+        resetButton.addEventListener("click", function () {
+          if (searchInput) searchInput.value = "";
+          if (yearSelect) yearSelect.value = "";
+          applyFilters();
+        });
+      }
+
+      applyFilters();
+    })();
+  </script>
 </body>
 </html>

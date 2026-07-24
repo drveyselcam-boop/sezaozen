@@ -552,3 +552,33 @@ footer {
     padding: 16px;
   }
 }
+
+.filter-reset {
+  align-self: end;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 1px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-reset:hover {
+  text-decoration: underline;
+}
+
+.publication-tools {
+  grid-template-columns: minmax(0, 1fr) 240px auto;
+}
+
+@media (max-width: 800px) {
+  .publication-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-reset {
+    width: 100%;
+  }
+}
